@@ -1,0 +1,38 @@
+{
+  "name": "cursor-file-navigation",
+  "displayName": "File-scoped Cursor Navigation",
+  "description": "Alt+Left/Right to navigate cursor history within the current file only",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorFileNav.back",
+        "title": "Navigate Back (current file)"
+      },
+      {
+        "command": "cursorFileNav.forward",
+        "title": "Navigate Forward (current file)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cursorFileNav.back",
+        "key": "alt+left",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "cursorFileNav.forward",
+        "key": "alt+right",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {}
+}
