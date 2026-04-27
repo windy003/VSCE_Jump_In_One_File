@@ -24,12 +24,12 @@
       {
         "command": "cursorFileNav.back",
         "key": "alt+left",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus || findWidgetVisible"
       },
       {
         "command": "cursorFileNav.forward",
         "key": "alt+right",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus || findWidgetVisible"
       }
     ]
   },
